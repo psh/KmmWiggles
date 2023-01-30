@@ -20,7 +20,7 @@ import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.tween
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavType
-import androidx.navigation.compose.navArgument
+import androidx.navigation.navArgument
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
@@ -34,7 +34,7 @@ fun WigglesMain(toggleTheme: () -> Unit) {
     AnimatedNavHost(navController, startDestination = Screen.Home.route) {
         composable(
             Screen.Home.route,
-            exitTransition = { _, _ ->
+            exitTransition = {
                 slideOutHorizontally(
                     targetOffsetX = { -300 },
                     animationSpec = tween(
@@ -43,7 +43,7 @@ fun WigglesMain(toggleTheme: () -> Unit) {
                     )
                 ) + fadeOut(animationSpec = tween(300))
             },
-            popEnterTransition = { _, _ ->
+            popEnterTransition = {
                 slideInHorizontally(
                     initialOffsetX = { -300 },
                     animationSpec = tween(
@@ -57,7 +57,7 @@ fun WigglesMain(toggleTheme: () -> Unit) {
         }
         composable(
             "${Screen.Details.route}/{id}/{title}/{location}",
-            enterTransition = { _, _ ->
+            enterTransition = {
                 slideInHorizontally(
                     initialOffsetX = { 300 },
                     animationSpec = tween(
@@ -66,7 +66,7 @@ fun WigglesMain(toggleTheme: () -> Unit) {
                     )
                 ) + fadeIn(animationSpec = tween(300))
             },
-            exitTransition = { _, _ ->
+            exitTransition = {
                 slideOutHorizontally(
                     targetOffsetX = { 300 },
                     animationSpec = tween(
