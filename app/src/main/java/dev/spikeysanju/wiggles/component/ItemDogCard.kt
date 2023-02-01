@@ -44,6 +44,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import dev.spikeysanju.wiggles.R
 import dev.spikeysanju.wiggles.model.Dog
+import dev.spikeysanju.wiggles.view.lookupImageResource
 
 @Composable
 fun ItemDogCard(dog: Dog, onItemClicked: (dog: Dog) -> Unit) {
@@ -62,7 +63,7 @@ fun ItemDogCard(dog: Dog, onItemClicked: (dog: Dog) -> Unit) {
                 .padding(16.dp)
         ) {
 
-            val image: Painter = painterResource(id = dog.image)
+            val image: Painter = painterResource(id = lookupImageResource(dog.image))
             Image(
                 modifier = Modifier
                     .size(80.dp, 80.dp)

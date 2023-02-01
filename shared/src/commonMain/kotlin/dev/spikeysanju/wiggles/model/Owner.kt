@@ -15,4 +15,4 @@
  */
 package dev.spikeysanju.wiggles.model
 
-data class Owner(val name: String, val bio: String, val image: Int)
+data class Owner(val name: String, val bio: String, val image: Image)

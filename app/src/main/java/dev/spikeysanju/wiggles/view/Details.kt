@@ -98,7 +98,7 @@ fun DetailsView(id: Int) {
         item {
             dog.apply {
 
-                val dogImage: Painter = painterResource(id = dog.image)
+                val dogImage: Painter = painterResource(id = lookupImageResource(dog.image))
                 Image(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -161,7 +161,7 @@ fun DetailsView(id: Int) {
                 Title(title = "Owner info")
                 Spacer(modifier = Modifier.height(16.dp))
                 owner.apply {
-                    OwnerCard(name, bio, image)
+                    OwnerCard(name, bio, lookupImageResource(image))
                 }
             }
         }
