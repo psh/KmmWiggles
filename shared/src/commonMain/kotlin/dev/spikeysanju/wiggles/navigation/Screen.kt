@@ -13,17 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package dev.spikeysanju.wiggles.model
+package dev.spikeysanju.wiggles.navigation
 
-data class Dog(
-    val id: Int,
-    val name: String,
-    val age: Double,
-    val gender: String,
-    val color: String,
-    val weight: Double,
-    val location: String,
-    val image: Int,
-    val about: String,
-    val owner: Owner
-)
+sealed class Screen(val route: String) {
+    object Home : Screen("home")
+    object Details : Screen("details")
+}

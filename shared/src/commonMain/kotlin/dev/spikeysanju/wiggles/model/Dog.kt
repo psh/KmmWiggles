@@ -13,12 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package dev.spikeysanju.wiggles.navigation
+package dev.spikeysanju.wiggles.model
 
-import androidx.annotation.StringRes
-import dev.spikeysanju.wiggles.R
-
-sealed class Screen(val route: String, @StringRes val resourceId: Int) {
-    object Home : Screen("home", R.string.text_home)
-    object Details : Screen("details", R.string.text_details)
-}
+data class Dog(
+    val id: Int,
+    val name: String,
+    val age: Double,
+    val gender: String,
+    val color: String,
+    val weight: Double,
+    val location: String,
+    val image: Image,
+    val about: String,
+    val owner: Owner
+)

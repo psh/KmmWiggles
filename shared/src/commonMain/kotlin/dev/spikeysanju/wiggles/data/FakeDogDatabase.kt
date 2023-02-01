@@ -15,12 +15,12 @@
  */
 package dev.spikeysanju.wiggles.data
 
-import dev.spikeysanju.wiggles.R
 import dev.spikeysanju.wiggles.model.Dog
+import dev.spikeysanju.wiggles.model.Image.*
 import dev.spikeysanju.wiggles.model.Owner
 
 object FakeDogDatabase {
-    val owner = Owner("Spikey Sanju", "Developer & Pet Lover", R.drawable.owner)
+    val owner = Owner("Spikey Sanju", "Developer & Pet Lover", DOG_OWNER)
     val dogList = listOf(
         Dog(
             0,
@@ -30,7 +30,7 @@ object FakeDogDatabase {
             "Brown",
             12.9,
             "389m away",
-            R.drawable.orange_dog,
+            ORANGE_DOG,
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
             owner
         ),
@@ -42,7 +42,7 @@ object FakeDogDatabase {
             "Gold",
             12.4,
             "412m away",
-            R.drawable.blue_dog,
+            BLUE_DOG,
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
             owner
         ),
@@ -54,7 +54,7 @@ object FakeDogDatabase {
             "White",
             9.6,
             "879m away",
-            R.drawable.red_dog,
+            RED_DOG,
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
             owner
         ),
@@ -66,7 +66,7 @@ object FakeDogDatabase {
             "Black",
             8.2,
             "672m away",
-            R.drawable.yellow_dog,
+            YELLOW_DOG,
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
             owner
         ),
@@ -78,7 +78,7 @@ object FakeDogDatabase {
             "Choco",
             14.9,
             "982m away",
-            R.drawable.white_dog,
+            WHITE_DOG,
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
             owner
         )
